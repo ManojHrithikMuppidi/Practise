@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2008-2010 Microarray Informatics Team, EMBL-European Bioinformatics Institute
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~
+  ~ For further details of the Gene Expression Atlas project, including source code,
+  ~ downloads and documentation, please see:
+  ~
+  ~ http://gxa.github.com/gxa
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/jee
+       http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Spring config for Atlas -->
+
+    <!-- SOLR index -->
+    <bean id="solrContainerFactory" class="uk.ac.ebi.gxa.index.SolrContainerFactory">
+        <property name="atlasIndex" ref="atlasIndex"/>
+        <property name="templatePath" value="solr"/>
+    </bean>
+
+    <bean name="solrContainer"
+          factory-bean="solrContainerFactory"
+          factory-method="createContainer"
+          destroy-method="shutdown"/>
+
+    <bean name="solrServerAtlas" class="org.apache.solr.client.solrj.embedded.EmbeddedSolrServer">
+        <constructor-arg ref="solrContainer"/>
+        <constructor-arg value="atlas"/>
+    </bean>
+
+    <bean name="solrServerExpt" class="org.apache.solr.client.solrj.embedded.EmbeddedSolrServer">
+        <constructor-arg ref="solrContainer"/>
+        <constructor-arg value="expt"/>
+    </bean>
+
+    <bean name="solrServerProp" class="org.apache.solr.client.solrj.embedded.EmbeddedSolrServer">
+        <constructor-arg ref="solrContainer"/>
+        <constructor-arg value="properties"/>
+    </bean>
+
+    <bean name="efo" class="uk.ac.ebi.gxa.efo.Efo" destroy-method="close">
+        <property name="uri" value="resource:META-INF/efo.owl"/>
+        <!-- can be any external of file url too -->
+        <!--<property name="uri" value="http://efo.svn.sourceforge.net/svnroot/efo/trunk/src/efoinowl/efo.owl"/>-->
+    </bean>
+
+    <!-- Loader component -->
+
+    <bean name="atlasLoader" class="uk.ac.ebi.gxa.loader.DefaultAtlasLoader">
+        <!-- DAO for data access, ready-to-use -->
+        <property name="atlasDAO" ref="atlasLoaderDAO"/>
+        <property name="missingDesignElementsCutoff" value="1.0"/>
+        <property name="allowReloading" value="true"/>
+        <property name="geneIdentifierPriority">
+            <util:list>
+                <value>ensembl</value>
+                <value>uniprot</value>
+            </util:list>
+        </property>
+    </bean>
+
+    <!-- Index Builder component -->
+    <bean name="indexBuilderServiceProperties"
+          class="uk.ac.ebi.gxa.index.builder.service.PropertiesIndexBuilderService">
+        <property name="atlasDAO" ref="atlasLoaderDAO"/>
+        <property name="solrServer" ref="solrServerProp"/>
+    </bean>
+
+    <bean name="indexBuilderServiceExperiments"
+          class="uk.ac.ebi.gxa.index.builder.service.ExperimentAtlasIndexBuilderService">
+        <property name="atlasDAO" ref="atlasLoaderDAO"/>
+        <property name="solrServer" ref="solrServerExpt"/>
+    </bean>
+
+    <bean name="indexBuilderServiceGenes" class="uk.ac.ebi.gxa.index.builder.service.GeneAtlasIndexBuilderService">
+        <property name="atlasDAO" ref="atlasLoaderDAO"/>
+        <property name="solrServer" ref="solrServerAtlas"/>
+        <property name="efo" ref="efo"/>
+    </bean>
+
+    <bean name="indexBuilder" class="uk.ac.ebi.gxa.index.builder.DefaultIndexBuilder"
+          destroy-method="shutdown">
+        <property name="services">
+            <util:list>
+                <ref bean="indexBuilderServiceProperties"/>
+                <ref bean="indexBuilderServiceExperiments"/>
+                <ref bean="indexBuilderServiceGenes"/>
+            </util:list>
+        </property>
+        <!-- configures behaviour of indexBuilder, whether we want genes and experiments -->
+        <property name="includeIndexes">
+            <util:list>
+                <value>properties</value>
+                <value>experiments</value>
+                <value>genes</value>
+            </util:list>
+        </property>
+    </bean>
+
+    <!-- NetCDF Generator component -->
+
+    <bean name="netCDFGenerator" class="uk.ac.ebi.gxa.netcdf.generator.DefaultNetCDFGenerator"
+          destroy-method="shutdown">
+        <!-- DAO for data access, ready-to-use -->
+        <property name="atlasDAO" ref="atlasLoaderDAO"/>
+        <!-- repository of NetCDFs, local filesystem directory -->
+        <property name="repositoryLocation" ref="atlasNetCDFRepo"/>
+        <!-- the number of NetCDFs that can be generated in parallel.  May need tweaking based on memory constraints -->
+        <property name="maxThreads" value="8"/>
+    </bean>
+
+    <!-- Analytics Generator component -->
+
+    <bean name="analyticsGenerator" class="uk.ac.ebi.gxa.analytics.generator.DefaultAnalyticsGenerator">
+        <!-- DAO for data access, ready-to-use -->
+        <property name="atlasDAO" ref="atlasLoaderDAO"/>
+        <!-- repository of NetCDFs, local filesystem directory -->
+        <property name="repositoryLocation" ref="atlasNetCDFRepo"/>
+        <!-- atlasRFactory provides access to RServices independent of environment -->
+        <property name="atlasComputeService" ref="atlasComputeService"/>
+    </bean>
+
+    <!-- Web interface component -->
+
+    <bean name="atlasSolrDAO" class="ae3.dao.AtlasDao">
+        <property name="solrServerAtlas" ref="solrServerAtlas"/>
+        <property name="solrServerExpt" ref="solrServerExpt"/>
+    </bean>
+
+    <bean name="atlasEfvService" class="ae3.service.structuredquery.AtlasEfvService">
+        <property name="solrServerAtlas" ref="solrServerAtlas"/>
+        <property name="solrServerExpt" ref="solrServerExpt"/>
+        <property name="solrServerProp" ref="solrServerProp"/>
+        <!-- needs it for cache updates -->
+        <property name="indexBuilder" ref="indexBuilder"/>
+    </bean>
+
+    <bean name="atlasEfoService" class="ae3.service.structuredquery.AtlasEfoService">
+        <property name="solrServerAtlas" ref="solrServerAtlas"/>
+        <property name="efo" ref="efo"/>
+        <!-- needs it for cache updates -->
+        <property name="indexBuilder" ref="indexBuilder"/>
+    </bean>
+
+    <bean name="atlasGenePropertyService" class="ae3.service.structuredquery.AtlasGenePropertyService">
+        <property name="solrServerAtlas" ref="solrServerAtlas"/>
+        <!-- needs it for cache updates -->
+        <property name="indexBuilder" ref="indexBuilder"/>
+    </bean>
+
+    <bean name="atlasQueryService" class="ae3.service.structuredquery.AtlasStructuredQueryService">
+        <property name="solrServerAtlas" ref="solrServerAtlas"/>
+        <property name="solrServerExpt" ref="solrServerExpt"/>
+        <property name="solrServerProp" ref="solrServerProp"/>
+        <property name="atlasSolrDAO" ref="atlasSolrDAO"/>
+        <property name="atlasDbDAO" ref="atlasInterfaceDAO"/>
+        <property name="efoService" ref="atlasEfoService"/>
+        <property name="efvService" ref="atlasEfvService"/>
+        <property name="efo" ref="efo"/>
+
+        <!-- needs it for cache updates -->
+        <property name="indexBuilder" ref="indexBuilder"/>
+
+        <!-- hack: it doesn't need to know about core container,
+                   but it uses it to close searcher and clean cache to prevent OOMs -->
+        <property name="coreContainer" ref="solrContainer"/>
+    </bean>
+
+    <!-- interface compute service -->
+    <bean name="atlasComputeService" class="uk.ac.ebi.gxa.analytics.compute.AtlasComputeService"
+          destroy-method="shutdown">
+        <property name="atlasRFactory" ref="atlasRFactory"/>
+    </bean>
+    <!-- interface download service -->
+    <bean name="atlasDownloadService" class="ae3.service.AtlasDownloadService"
+          destroy-method="shutdown">
+        <property name="atlasQueryService" ref="atlasQueryService"/>
+    </bean>
+    <!-- interface plotter -->
+    <bean name="atlasPlotter" class="uk.ac.ebi.gxa.web.AtlasPlotter">
+        <property name="atlasDatabaseDAO" ref="atlasInterfaceDAO"/>
+        <property name="atlasSolrDAO" ref="atlasSolrDAO"/>
+        <property name="atlasNetCDFRepo" ref="atlasNetCDFRepo"/>
+    </bean>
+
+    <!-- Gene list cache -->
+    <bean name="geneListCacheService" class="ae3.service.GeneListCacheService">
+        <property name="genePropertyService" ref="atlasGenePropertyService"/>
+        <property name="indexBuilder" ref="indexBuilder"/>
+    </bean>
+
+    <!-- Task manager -->
+    <bean name="taskManagerStorage" class="uk.ac.ebi.gxa.tasks.DbStorage">
+        <property name="jdbcTemplate" ref="interfaceTemplate"/>
+    </bean>
+
+    <bean name="taskManager" class="uk.ac.ebi.gxa.tasks.TaskManager">
+        <property name="analyticsGenerator" ref="analyticsGenerator"/>
+        <property name="indexBuilder" ref="indexBuilder"/>
+        <property name="netcdfGenerator" ref="netCDFGenerator"/>
+        <property name="loader" ref="atlasLoader"/>
+        <property name="storage" ref="taskManagerStorage"/>
+        <property name="maxWorkingTasks" value="16" />
+    </bean>
+
+    <!-- Servlets (actually, HttpRequestHandlers) -->
+
+    <bean name="queryRequestHandler" class="uk.ac.ebi.gxa.requesthandlers.query.AtlasQueryRequestHandler">
+        <property name="queryService" ref="atlasQueryService"/>
+        <property name="downloadService" ref="atlasDownloadService"/>
+        <property name="indexBuilder" ref="indexBuilder"/>
+    </bean>
+
+    <bean name="autocompleterRequestHandler" class="uk.ac.ebi.gxa.requesthandlers.helper.FactorValuesRequestHandler">
+        <property name="autoCompleters">
+            <util:map>
+                <entry key="gene">
+                    <util:list>
+                        <ref bean="atlasGenePropertyService"/>
+                    </util:list>
+                </entry>
+                <entry key="efv">
+                    <util:list>
+                        <ref bean="atlasEfvService"/>
+                    </util:list>
+                </entry>
+                <entry key="efo">
+                    <util:list>
+                        <ref bean="atlasEfoService"/>
+                    </util:list>
+                </entry>
+                <entry key="efoefv">
+                    <util:list>
+                        <ref bean="atlasEfoService"/>
+                        <ref bean="atlasEfvService"/>
+                    </util:list>
+                </entry>
+            </util:map>
+        </property>
+    </bean>
+
+    <bean name="efoRequestHandler" class="uk.ac.ebi.gxa.requesthandlers.helper.EfoRequestHandler">
+        <property name="efoService" ref="atlasEfoService"/>
+    </bean>
+
+    <bean name="apiQueryRequestHandler" class="uk.ac.ebi.gxa.requesthandlers.api.ApiQueryRequestHandler">
+        <property name="dao" ref="atlasSolrDAO"/>
+        <property name="efo" ref="efo"/>
+        <property name="queryService" ref="atlasQueryService"/>
+        <property name="indexBuilder" ref="indexBuilder"/>
+        <property name="netCDFPath" ref="atlasNetCDFRepo"/>
+    </bean>
+
+    <bean name="experimentsRequestHandler" class="uk.ac.ebi.gxa.requesthandlers.query.ExperimentsPopupRequestHandler">
+        <property name="dao" ref="atlasSolrDAO"/>
+        <property name="efo" ref="efo"/>
+    </bean>
+
+    <bean name="expGeneListRequestHandler"
+          class="uk.ac.ebi.gxa.requesthandlers.experimentpage.GeneListWidgetRequestHandler">
+        <property name="queryService" ref="atlasQueryService"/>
+        <property name="computeService" ref="atlasComputeService"/>
+    </bean>
+
+    <bean name="geneIdsDownloadRequestHandler"
+          class="uk.ac.ebi.gxa.requesthandlers.dump.GeneIdentifiersDumpDownloadRequestHandler">
+        <property name="coreContainer" ref="solrContainer"/>
+        <property name="indexBuilder" ref="indexBuilder"/>
+    </bean>
+
+    <bean name="ebeyeDownloadRequestHandler" class="uk.ac.ebi.gxa.requesthandlers.dump.GeneEbeyeDumpRequestHandler">
+        <property name="dao" ref="atlasSolrDAO"/>
+        <property name="indexBuilder" ref="indexBuilder"/>
+    </bean>
+
+    <bean name="sitemapDownloadRequestHandler"
+          class="uk.ac.ebi.gxa.requesthandlers.dump.GoogleSitemapXmlRequestHandler">
+        <property name="coreContainer" ref="solrContainer"/>
+        <property name="indexBuilder" ref="indexBuilder"/>
+    </bean>
+
+    <bean name="listviewDownloadRequestHandler"
+          class="uk.ac.ebi.gxa.requesthandlers.download.DownloadFileRequestHandler">
+    </bean>
+
+    <bean name="plotterRequestHandler" class="uk.ac.ebi.gxa.requesthandlers.helper.PlotterRequestHandler">
+        <property name="plotter" ref="atlasPlotter"/>
+    </bean>
+
+    <bean name="experimentPageRequestHandler"
+          class="uk.ac.ebi.gxa.requesthandlers.experimentpage.ExperimentPageRequestHandler">
+        <property name="dao" ref="atlasSolrDAO"/>
+        <property name="queryService" ref="atlasQueryService"/>
+        <property name="atlasNetCDFRepo" ref="atlasNetCDFRepo"/>
+    </bean>
+
+    <bean name="genePageRequestHandler" class="uk.ac.ebi.gxa.requesthandlers.genepage.GenePageRequestHandler">
+        <property name="atlasSolrDao" ref="atlasSolrDAO"/>
+    </bean>
+
+    <bean name="geneExperimentsListRequestHandler"
+          class="uk.ac.ebi.gxa.requesthandlers.genepage.ExperimentsListRequestHandler">
+        <property name="atlasSolrDao" ref="atlasSolrDAO"/>
+    </bean>
+
+    <bean name="downloadsProgressRequestHandler"
+          class="uk.ac.ebi.gxa.requesthandlers.download.DownloadProgressRequestHandler">
+        <property name="downloadService" ref="atlasDownloadService"/>
+    </bean>
+
+    <bean name="feedbackRequestHandler" class="uk.ac.ebi.gxa.requesthandlers.helper.FeedbackRequestHandler">
+
+    </bean>
+
+    <bean name="taskManagerRequestHandler" class="uk.ac.ebi.gxa.requesthandlers.tasks.TaskManagerRequestHandler">
+        <property name="taskManager" ref="taskManager" />
+        <property name="dao" ref="atlasInterfaceDAO"/>
+        <property name="dbStorage" ref="taskManagerStorage"/>
+    </bean>
+
+    <!-- JMX -->
+    <bean id="namingStrategy" class="uk.ac.ebi.gxa.jmx.PerInstanceNamingStrategy">
+        <property name="domain" value="GXAtlas"/>
+    </bean>
+
+    <bean id="jmxExporter" class="org.springframework.jmx.export.MBeanExporter" lazy-init="false">
+        <property name="registrationBehaviorName" value="REGISTRATION_IGNORE_EXISTING"/>
+        <property name="beans">
+            <util:map>
+                <entry key="AtlasManager" value-ref="atlasManager"/>
+            </util:map>
+        </property>
+        <property name="namingStrategy" ref="namingStrategy"/>
+    </bean>
+
+    <bean id="atlasManager" class="uk.ac.ebi.gxa.jmx.AtlasManager">
+        <property name="indexBuilder" ref="indexBuilder"/>
+        <property name="atlasIndex" ref="atlasIndex"/>
+        <property name="netCDFRepo" ref="atlasNetCDFRepo"/>
+        <property name="dataSource" ref="atlasDataSource"/>
+        <property name="efo" ref="efo"/>
+    </bean>
+
+    <!-- Required spring driven data access configuration for web interface -->
+
+    <!-- Spring JDBC template for database queries -->
+    <bean name="interfaceTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <!-- datasource bean, from JNDI -->
+        <property name="dataSource" ref="atlasDataSource"/>
+        <property name="nativeJdbcExtractor" ref="nativeJdbcExtractor"/>
+    </bean>
+
+    <!-- Configure AtlasDAO for this datasource -->
+    <bean name="atlasInterfaceDAO" class="uk.ac.ebi.gxa.dao.AtlasDAO">
+        <property name="jdbcTemplate" ref="interfaceTemplate"/>
+    </bean>
+
+    <!-- Required spring driven data access configuration for loader components -->
+
+    <!-- Spring JDBC template for database queries -->
+    <bean name="loaderTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <!-- datasource bean, from JNDI -->
+        <property name="dataSource" ref="atlasDataSource2"/>
+        <property name="nativeJdbcExtractor" ref="nativeJdbcExtractor"/>
+    </bean>
+
+    <!-- Configure AtlasDAO for this datasource -->
+    <bean name="atlasLoaderDAO" class="uk.ac.ebi.gxa.dao.AtlasDAO">
+        <property name="jdbcTemplate" ref="loaderTemplate"/>
+    </bean>
+
+    <!-- Common spring-drive data access configuration -->
+    <!-- native extractor for fetching oracle connections from pool wrapper etc -->
+    <bean name="nativeJdbcExtractor"
+          class="org.springframework.jdbc.support.nativejdbc.CommonsDbcpNativeJdbcExtractor"/>
+
+    <!--Configure R workbench -->
+    <!-- note that no-arg factory method reads R.properties from classpath, and possibly biocep.properties too -->
+    <bean name="atlasRFactory" factory-bean="atlasRFactoryBuilder" factory-method="buildAtlasRFactory"/>
+
+    <bean name="atlasRFactoryBuilder"
+          class="uk.ac.ebi.gxa.R.AtlasRFactoryBuilder"
+          factory-method="getAtlasRFactoryBuilder"/>
+
+    <!-- Configuration for JNDI resource lookup -->
+    <jee:jndi-lookup id="atlasDataSource"
+                     jndi-name="/jdbc/ATLAS1"
+                     resource-ref="true"/>
+
+    <jee:jndi-lookup id="atlasDataSource2"
+                     jndi-name="/jdbc/ATLAS2"
+                     resource-ref="true"/>
+
+    <jee:jndi-lookup id="atlasIndex"
+                     jndi-name="/file/GXAINDEX"
+                     resource-ref="true"/>
+
+    <jee:jndi-lookup id="atlasNetCDFRepo"
+                     jndi-name="/file/GXANETCDFS"
+                     resource-ref="true"/>
+
+</beans>

@@ -1,0 +1,284 @@
+13-Apr-2023 08:36:09.894 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.73
+13-Apr-2023 08:36:09.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 15:33:40 UTC
+13-Apr-2023 08:36:09.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.73.0
+13-Apr-2023 08:36:09.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+13-Apr-2023 08:36:09.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Apr-2023 08:36:09.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Apr-2023 08:36:09.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_202\jre
+13-Apr-2023 08:36:09.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_202-b08
+13-Apr-2023 08:36:09.908 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Apr-2023 08:36:09.908 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 08:36:09.909 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 08:36:09.913 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\conf\logging.properties
+13-Apr-2023 08:36:09.913 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Apr-2023 08:36:09.913 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Apr-2023 08:36:09.914 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Apr-2023 08:36:09.914 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Apr-2023 08:36:09.914 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 08:36:09.915 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 08:36:09.916 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\temp
+13-Apr-2023 08:36:09.931 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_202\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Dell\Downloads\terraform_1.4.4_windows_amd64;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_202\bin;D:\DevOps\Maven\apache-maven-3.9.1-bin\apache-maven-3.9.1\bin;C:\Users\Dell\AppData\Local\Microsoft\WindowsApps;C:\Users\Dell\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dell\Downloads\terraform_1.4.4_windows_amd64.zip;;.]
+13-Apr-2023 08:36:10.576 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 08:36:10.621 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1017] milliseconds
+13-Apr-2023 08:36:10.679 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Apr-2023 08:36:10.679 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+13-Apr-2023 08:36:10.702 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\docs]
+13-Apr-2023 08:36:11.221 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [164] milliseconds.
+13-Apr-2023 08:36:11.262 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\docs] has finished in [559] ms
+13-Apr-2023 08:36:11.263 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\examples]
+13-Apr-2023 08:36:11.647 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\examples] has finished in [384] ms
+13-Apr-2023 08:36:11.649 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\host-manager]
+13-Apr-2023 08:36:11.692 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\host-manager] has finished in [43] ms
+13-Apr-2023 08:36:11.692 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\manager]
+13-Apr-2023 08:36:11.728 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\manager] has finished in [36] ms
+13-Apr-2023 08:36:11.728 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\ROOT]
+13-Apr-2023 08:36:11.760 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\ROOT] has finished in [32] ms
+13-Apr-2023 08:36:11.769 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 08:36:11.793 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1167] milliseconds
+13-Apr-2023 08:39:42.130 INFO [Catalina-utility-2] org.apache.catalina.users.MemoryUserDatabase.backgroundProcess Reloading memory user database [UserDatabase] from updated source [file:/D:/DevOps/Tomcat/apache-tomcat-9.0.73/apache-tomcat-9.0.73/conf/tomcat-users.xml]
+13-Apr-2023 08:40:13.920 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Apr-2023 08:40:13.921 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 08:40:14.076 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+13-Apr-2023 08:40:14.140 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 08:40:14.155 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 08:41:36.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.73
+13-Apr-2023 08:41:36.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 15:33:40 UTC
+13-Apr-2023 08:41:36.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.73.0
+13-Apr-2023 08:41:36.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+13-Apr-2023 08:41:36.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Apr-2023 08:41:36.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Apr-2023 08:41:36.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_202\jre
+13-Apr-2023 08:41:36.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_202-b08
+13-Apr-2023 08:41:36.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Apr-2023 08:41:36.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 08:41:36.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 08:41:36.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\conf\logging.properties
+13-Apr-2023 08:41:36.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Apr-2023 08:41:36.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Apr-2023 08:41:36.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Apr-2023 08:41:36.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Apr-2023 08:41:36.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 08:41:36.774 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 08:41:36.775 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\temp
+13-Apr-2023 08:41:36.783 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_202\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Dell\Downloads\terraform_1.4.4_windows_amd64;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_202\bin;D:\DevOps\Maven\apache-maven-3.9.1-bin\apache-maven-3.9.1\bin;C:\Users\Dell\AppData\Local\Microsoft\WindowsApps;C:\Users\Dell\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dell\Downloads\terraform_1.4.4_windows_amd64.zip;;.]
+13-Apr-2023 08:41:37.160 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 08:41:37.191 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [621] milliseconds
+13-Apr-2023 08:41:37.235 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Apr-2023 08:41:37.235 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+13-Apr-2023 08:41:37.249 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\docs]
+13-Apr-2023 08:41:37.642 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [104] milliseconds.
+13-Apr-2023 08:41:37.669 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\docs] has finished in [419] ms
+13-Apr-2023 08:41:37.670 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\examples]
+13-Apr-2023 08:41:38.021 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\examples] has finished in [351] ms
+13-Apr-2023 08:41:38.024 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\host-manager]
+13-Apr-2023 08:41:38.069 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\host-manager] has finished in [46] ms
+13-Apr-2023 08:41:38.069 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\manager]
+13-Apr-2023 08:41:38.112 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\manager] has finished in [43] ms
+13-Apr-2023 08:41:38.112 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\ROOT]
+13-Apr-2023 08:41:38.142 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\ROOT] has finished in [30] ms
+13-Apr-2023 08:41:38.151 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 08:41:38.180 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [987] milliseconds
+13-Apr-2023 08:47:35.779 INFO [http-nio-8085-exec-3] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample-1.0-SNAPSHOT.war]
+13-Apr-2023 08:47:46.860 WARNING [http-nio-8085-exec-3] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 08:47:46.862 WARNING [http-nio-8085-exec-3] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 08:47:48.788 SEVERE [http-nio-8085-exec-3] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Apr-2023 08:47:48.792 SEVERE [http-nio-8085-exec-3] org.apache.catalina.core.StandardContext.startInternal Context [/sample-1.0-SNAPSHOT] startup failed due to previous errors
+13-Apr-2023 08:47:48.820 INFO [http-nio-8085-exec-3] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample-1.0-SNAPSHOT.war] has finished in [13,041] ms
+13-Apr-2023 08:48:44.035 INFO [http-nio-8085-exec-10] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample2.war]
+13-Apr-2023 08:48:45.737 INFO [http-nio-8085-exec-10] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2023 08:48:47.027 INFO [http-nio-8085-exec-10] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample2.war] has finished in [2,992] ms
+13-Apr-2023 08:53:32.928 INFO [http-nio-8085-exec-16] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample3.war]
+13-Apr-2023 08:53:35.245 INFO [http-nio-8085-exec-16] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2023 08:53:37.218 INFO [http-nio-8085-exec-16] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample3.war] has finished in [4,291] ms
+13-Apr-2023 08:54:01.159 INFO [http-nio-8085-exec-11] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample4-1.0-SNAPSHOT.war]
+13-Apr-2023 08:54:12.951 WARNING [http-nio-8085-exec-11] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 08:54:12.953 WARNING [http-nio-8085-exec-11] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 08:54:14.669 SEVERE [http-nio-8085-exec-11] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Apr-2023 08:54:14.671 SEVERE [http-nio-8085-exec-11] org.apache.catalina.core.StandardContext.startInternal Context [/sample4-1.0-SNAPSHOT] startup failed due to previous errors
+13-Apr-2023 08:54:14.690 INFO [http-nio-8085-exec-11] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample4-1.0-SNAPSHOT.war] has finished in [13,531] ms
+13-Apr-2023 14:16:46.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.73
+13-Apr-2023 14:16:46.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 15:33:40 UTC
+13-Apr-2023 14:16:46.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.73.0
+13-Apr-2023 14:16:46.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+13-Apr-2023 14:16:46.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Apr-2023 14:16:46.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Apr-2023 14:16:46.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_202\jre
+13-Apr-2023 14:16:46.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_202-b08
+13-Apr-2023 14:16:46.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Apr-2023 14:16:46.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:16:46.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:16:46.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\conf\logging.properties
+13-Apr-2023 14:16:46.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Apr-2023 14:16:46.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Apr-2023 14:16:46.518 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Apr-2023 14:16:46.518 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Apr-2023 14:16:46.518 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:16:46.518 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:16:46.519 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\temp
+13-Apr-2023 14:16:46.525 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_202\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Dell\Downloads\terraform_1.4.4_windows_amd64;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_202\bin;D:\DevOps\Maven\apache-maven-3.9.1-bin\apache-maven-3.9.1\bin;C:\Users\Dell\AppData\Local\Microsoft\WindowsApps;C:\Users\Dell\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dell\Downloads\terraform_1.4.4_windows_amd64.zip;;.]
+13-Apr-2023 14:16:46.857 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 14:16:46.893 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [563] milliseconds
+13-Apr-2023 14:16:46.955 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Apr-2023 14:16:46.956 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+13-Apr-2023 14:16:47.013 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample-1.0-SNAPSHOT.war]
+13-Apr-2023 14:16:56.861 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:16:56.861 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:17:08.158 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Apr-2023 14:17:08.293 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/sample-1.0-SNAPSHOT] startup failed due to previous errors
+13-Apr-2023 14:17:08.304 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [sample-1.0-SNAPSHOT] appears to have started a thread named [Thread-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ net.sourceforge.fluxion.utils.ReasonerSessionManager$ReasonerSessionReaper.run(ReasonerSessionManager.java:353)
+ java.lang.Thread.run(Thread.java:748)
+13-Apr-2023 14:17:08.315 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample-1.0-SNAPSHOT.war] has finished in [21,303] ms
+13-Apr-2023 14:17:08.331 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample2.war]
+13-Apr-2023 14:17:09.333 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2023 14:17:10.210 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample2.war] has finished in [1,879] ms
+13-Apr-2023 14:17:10.222 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample3.war]
+13-Apr-2023 14:17:11.249 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2023 14:17:12.200 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample3.war] has finished in [1,978] ms
+13-Apr-2023 14:17:12.210 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample4-1.0-SNAPSHOT.war]
+13-Apr-2023 14:17:20.125 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:17:20.127 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:17:30.458 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Apr-2023 14:17:30.459 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/sample4-1.0-SNAPSHOT] startup failed due to previous errors
+13-Apr-2023 14:17:30.469 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [sample4-1.0-SNAPSHOT] appears to have started a thread named [Thread-6] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ net.sourceforge.fluxion.utils.ReasonerSessionManager$ReasonerSessionReaper.run(ReasonerSessionManager.java:353)
+ java.lang.Thread.run(Thread.java:748)
+13-Apr-2023 14:17:30.472 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample4-1.0-SNAPSHOT.war] has finished in [18,262] ms
+13-Apr-2023 14:17:30.474 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\docs]
+13-Apr-2023 14:17:30.496 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\docs] has finished in [22] ms
+13-Apr-2023 14:17:30.496 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\examples]
+13-Apr-2023 14:17:31.144 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\examples] has finished in [648] ms
+13-Apr-2023 14:17:31.145 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\host-manager]
+13-Apr-2023 14:17:31.169 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\host-manager] has finished in [24] ms
+13-Apr-2023 14:17:31.170 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\manager]
+13-Apr-2023 14:17:31.192 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\manager] has finished in [22] ms
+13-Apr-2023 14:17:31.192 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\ROOT]
+13-Apr-2023 14:17:31.212 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\ROOT] has finished in [20] ms
+13-Apr-2023 14:17:31.218 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 14:17:31.244 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [44344] milliseconds
+13-Apr-2023 14:42:35.697 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.73
+13-Apr-2023 14:42:35.700 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 15:33:40 UTC
+13-Apr-2023 14:42:35.700 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.73.0
+13-Apr-2023 14:42:35.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+13-Apr-2023 14:42:35.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Apr-2023 14:42:35.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Apr-2023 14:42:35.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_202\jre
+13-Apr-2023 14:42:35.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_202-b08
+13-Apr-2023 14:42:35.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Apr-2023 14:42:35.702 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:42:35.702 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:42:35.702 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\conf\logging.properties
+13-Apr-2023 14:42:35.702 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Apr-2023 14:42:35.702 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Apr-2023 14:42:35.703 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Apr-2023 14:42:35.703 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Apr-2023 14:42:35.703 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:42:35.704 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:42:35.704 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\temp
+13-Apr-2023 14:42:35.709 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_202\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Dell\Downloads\terraform_1.4.4_windows_amd64;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_202\bin;D:\DevOps\Maven\apache-maven-3.9.1-bin\apache-maven-3.9.1\bin;C:\Users\Dell\AppData\Local\Microsoft\WindowsApps;C:\Users\Dell\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dell\Downloads\terraform_1.4.4_windows_amd64.zip;;.]
+13-Apr-2023 14:42:36.056 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 14:42:36.085 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [575] milliseconds
+13-Apr-2023 14:42:36.119 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Apr-2023 14:42:36.119 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+13-Apr-2023 14:42:36.159 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample-1.0-SNAPSHOT.war]
+13-Apr-2023 14:42:40.581 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:42:40.597 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:43:02.650 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Apr-2023 14:43:02.903 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/sample-1.0-SNAPSHOT] startup failed due to previous errors
+13-Apr-2023 14:43:02.911 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [sample-1.0-SNAPSHOT] appears to have started a thread named [Thread-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ net.sourceforge.fluxion.utils.ReasonerSessionManager$ReasonerSessionReaper.run(ReasonerSessionManager.java:353)
+ java.lang.Thread.run(Thread.java:748)
+13-Apr-2023 14:43:02.916 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample-1.0-SNAPSHOT.war] has finished in [26,757] ms
+13-Apr-2023 14:43:02.916 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample2.war]
+13-Apr-2023 14:43:04.293 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2023 14:43:06.617 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample2.war] has finished in [3,701] ms
+13-Apr-2023 14:43:06.617 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample3.war]
+13-Apr-2023 14:43:08.428 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2023 14:43:10.768 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample3.war] has finished in [4,151] ms
+13-Apr-2023 14:43:10.774 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample4-1.0-SNAPSHOT.war]
+13-Apr-2023 14:43:16.363 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:43:16.367 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:43:42.637 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Apr-2023 14:43:42.637 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/sample4-1.0-SNAPSHOT] startup failed due to previous errors
+13-Apr-2023 14:43:42.671 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [sample4-1.0-SNAPSHOT] appears to have started a thread named [Thread-6] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ net.sourceforge.fluxion.utils.ReasonerSessionManager$ReasonerSessionReaper.run(ReasonerSessionManager.java:353)
+ java.lang.Thread.run(Thread.java:748)
+13-Apr-2023 14:43:42.674 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample4-1.0-SNAPSHOT.war] has finished in [31,900] ms
+13-Apr-2023 14:43:42.674 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\docs]
+13-Apr-2023 14:43:42.716 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\docs] has finished in [42] ms
+13-Apr-2023 14:43:42.723 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\examples]
+13-Apr-2023 14:43:43.174 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\examples] has finished in [451] ms
+13-Apr-2023 14:43:43.176 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\host-manager]
+13-Apr-2023 14:43:43.222 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\host-manager] has finished in [48] ms
+13-Apr-2023 14:43:43.226 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\manager]
+13-Apr-2023 14:43:43.275 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\manager] has finished in [49] ms
+13-Apr-2023 14:43:43.277 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\ROOT]
+13-Apr-2023 14:43:43.312 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\ROOT] has finished in [36] ms
+13-Apr-2023 14:43:43.322 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 14:43:43.350 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [67269] milliseconds
+13-Apr-2023 14:56:24.884 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.73
+13-Apr-2023 14:56:24.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 15:33:40 UTC
+13-Apr-2023 14:56:24.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.73.0
+13-Apr-2023 14:56:24.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+13-Apr-2023 14:56:24.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Apr-2023 14:56:24.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Apr-2023 14:56:24.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_202\jre
+13-Apr-2023 14:56:24.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_202-b08
+13-Apr-2023 14:56:24.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Apr-2023 14:56:24.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:56:24.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:56:24.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\conf\logging.properties
+13-Apr-2023 14:56:24.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Apr-2023 14:56:24.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Apr-2023 14:56:24.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Apr-2023 14:56:24.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Apr-2023 14:56:24.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:56:24.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73
+13-Apr-2023 14:56:24.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\temp
+13-Apr-2023 14:56:24.897 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_202\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Dell\Downloads\terraform_1.4.4_windows_amd64;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_202\bin;D:\DevOps\Maven\apache-maven-3.9.1-bin\apache-maven-3.9.1\bin;C:\Users\Dell\AppData\Local\Microsoft\WindowsApps;C:\Users\Dell\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dell\Downloads\terraform_1.4.4_windows_amd64.zip;;.]
+13-Apr-2023 14:56:25.339 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 14:56:25.366 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [682] milliseconds
+13-Apr-2023 14:56:25.397 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Apr-2023 14:56:25.398 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+13-Apr-2023 14:56:25.430 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample-1.0-SNAPSHOT.war]
+13-Apr-2023 14:56:29.774 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:56:29.776 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:56:52.389 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Apr-2023 14:56:52.654 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/sample-1.0-SNAPSHOT] startup failed due to previous errors
+13-Apr-2023 14:56:52.674 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [sample-1.0-SNAPSHOT] appears to have started a thread named [Thread-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ net.sourceforge.fluxion.utils.ReasonerSessionManager$ReasonerSessionReaper.run(ReasonerSessionManager.java:353)
+ java.lang.Thread.run(Thread.java:748)
+13-Apr-2023 14:56:52.690 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample-1.0-SNAPSHOT.war] has finished in [27,259] ms
+13-Apr-2023 14:56:52.691 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample2.war]
+13-Apr-2023 14:56:53.789 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2023 14:56:55.676 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample2.war] has finished in [2,985] ms
+13-Apr-2023 14:56:55.676 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample3.war]
+13-Apr-2023 14:56:57.375 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2023 14:56:59.290 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample3.war] has finished in [3,614] ms
+13-Apr-2023 14:56:59.298 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample4-1.0-SNAPSHOT.war]
+13-Apr-2023 14:57:04.528 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:57:04.528 WARNING [main] org.apache.catalina.core.NamingContextListener.addResource Failed to register in JMX: [javax.naming.NamingException: Could not load resource factory class [Root exception is java.lang.ClassNotFoundException: org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory]]
+13-Apr-2023 14:57:35.492 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Apr-2023 14:57:35.500 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/sample4-1.0-SNAPSHOT] startup failed due to previous errors
+13-Apr-2023 14:57:35.510 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [sample4-1.0-SNAPSHOT] appears to have started a thread named [Thread-6] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ net.sourceforge.fluxion.utils.ReasonerSessionManager$ReasonerSessionReaper.run(ReasonerSessionManager.java:353)
+ java.lang.Thread.run(Thread.java:748)
+13-Apr-2023 14:57:35.523 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\sample4-1.0-SNAPSHOT.war] has finished in [36,225] ms
+13-Apr-2023 14:57:35.523 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\docs]
+13-Apr-2023 14:57:35.567 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\docs] has finished in [44] ms
+13-Apr-2023 14:57:35.572 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\examples]
+13-Apr-2023 14:57:35.990 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\examples] has finished in [418] ms
+13-Apr-2023 14:57:35.990 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\host-manager]
+13-Apr-2023 14:57:36.032 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\host-manager] has finished in [42] ms
+13-Apr-2023 14:57:36.032 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\manager]
+13-Apr-2023 14:57:36.072 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\manager] has finished in [40] ms
+13-Apr-2023 14:57:36.081 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\ROOT]
+13-Apr-2023 14:57:36.114 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\DevOps\Tomcat\apache-tomcat-9.0.73\apache-tomcat-9.0.73\webapps\ROOT] has finished in [33] ms
+13-Apr-2023 14:57:36.125 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8085"]
+13-Apr-2023 14:57:36.171 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [70803] milliseconds
